@@ -1,4 +1,4 @@
-# calendar
+# Calendar
 Calendar app with navigation made in React.
 
 ## Features
