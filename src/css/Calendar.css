@@ -1,0 +1,152 @@
+
+
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    --headerFontSize: 2rem;   
+    --headerPadding: 0.5rem; 
+    --footerFontSize: 1rem;
+    --footerPadding: 1rem;
+    --fs: 1.5rem;   
+
+    --fontColor: #ededed;
+    --mainDark: #151e32;
+    --color1: #1d2e50ad;
+    --color2: #233251ce;
+    --color3: #27334c;
+
+    --mainHeight: calc(
+        100vh 
+        - (2 * var(--headerFontSize) )
+        - (2 * var(--headerPadding))
+        - var(--footerFontSize) 
+        - (2 * var(--footerPadding))
+    );
+    --expenseSheetHeight: calc(var(--mainHeight) - 3.5rem);
+
+    --highlighted: #435680;
+    --transition1: all 150ms;
+}
+
+
+
+
+
+
+.Calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.month {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar-day, .calendar-empty {
+    width: calc(100% / 7);
+    min-width: 100px;
+    height: calc(var(--expenseSheetHeight) / 7);
+    border: 1px solid black;
+    box-sizing: border-box;
+    transition: var(--transition1);
+    cursor: pointer;
+}
+
+.calendar-empty {
+    cursor: default;
+    background-color: #070c16;
+
+}
+
+
+
+.calendar-day:nth-of-type(even) {
+    background-color: var(--color1);
+}
+.calendar-day:nth-of-type(odd) {
+    background-color: var(--color2);
+}
+
+.calendar-day:hover {
+    background-color: var(--highlighted);
+    box-shadow: 0 0 20px var(--highlighted);
+    z-index: 100;
+}
+
+.day-label {
+    text-align: left;
+    padding: .4em;
+    user-select: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+
+
+
+.weekday-labels {
+    display: flex;
+}
+.weekday-label {
+    width: calc(100% / 7);
+    user-select: none;
+    font-size: 1.2rem;
+
+}
+
+
+
+
+
+.monthly-header {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.header-month {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: .2em;
+    width: 150px;
+}
+.header-year {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+
+
+.CalendarNav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button-tray {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    gap: .4em;
+}
+
+
+.nav-btn {
+    font-size: 2rem;
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    transition: var(--transition1);
+}
+.nav-btn:hover {
+    color: rgb(111, 111, 111);
+}
+
+@media screen and (max-width: 800px) {
+.weekday-labels {
+    display: none;
+
+}

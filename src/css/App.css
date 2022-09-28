@@ -1,0 +1,17 @@
+
+
+.App {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1em .4em;
+
+    color: var(--fontColor);
+    font-size: 62.5%;
+    font-size: var(--fs);
+    text-align: center;
+    height: var(--mainHeight);
+}
+
+
+
+

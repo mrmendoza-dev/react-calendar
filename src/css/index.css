@@ -1,0 +1,23 @@
+
+
+html {
+    line-height: 1;
+}
+
+body {
+    padding: 0;
+    background-color: rgb(16, 16, 16);
+    overflow-y: auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
