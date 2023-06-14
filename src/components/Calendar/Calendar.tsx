@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import "../css/Calendar.css"
-import CalendarNav from "./CalendarNav";
+import "./Calendar.scss"
 import {nanoid} from "nanoid"
 export default function Calendar() {
 
